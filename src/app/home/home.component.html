@@ -1,0 +1,55 @@
+<div [class.dark] = "this.themeService.isDarkMode()" class="transition-all duration-500" >
+    <div class="back bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 min-h-screen">
+      <header class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-3xl flex justify-center text-center space-x-3 font-bold text-blue-800 dark:text-blue-200">
+          <div class="felx pt-3 justify-center text-center">
+            You'r Welcome {{ user }}
+          </div>
+        </h1>
+        <div class="flex items-center space-x-4">
+         
+            <!-- <button
+         
+          (click)="toggleProfile()"
+          class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-blue-600 dark:text-blue-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
+          aria-label="Toggle profile view"
+            >
+
+            <svg
+            class="w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A12.04 12.04 0 0012 21a12.04 12.04 0 006.879-3.196M15 10a3 3 0 11-6 0 3 3 0 016 0zm-7 8a7 7 0 1114 0H5z" />
+          </svg>
+            
+          </button> -->
+          <app-theme-toggle></app-theme-toggle>
+        </div>
+      </header>
+      <main>
+        
+            @if (showProfile()) {
+                <app-user-profile (pressed)="toggleProfile()"></app-user-profile>
+            }
+            @else {
+                <app-hero (pressed)="toggleProfile()"></app-hero>
+                <div class="container mx-auto px-4 py-8">
+                  <app-major-selection (selectMajor)="onSelectMajor($event)" />
+                  <app-grade-calculator [major]="selectedMajor || ''" (reset)="onReset()" />
+                </div>
+            }
+            
+          
+          <!-- @else { 
+              <app-auth></app-auth>
+          }
+     -->
+      </main>
+      <app-footer></app-footer>
+    </div>
+  </div>
+  
+  

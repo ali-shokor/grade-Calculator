@@ -1,0 +1,25 @@
+* {
+    transition: all .2s;
+}
+
+.back {
+  transition: all .3s;
+  background: 
+    url("./blob-scene-haikei (10).svg") top/cover no-repeat, /* Top layer: shapes */
+    linear-gradient(to bottom, #f3f4f6, #ffffff); /* Bottom layer: gradient */
+}
+
+.dark .back {
+    transition: all .3s;
+  background: 
+    url("./blob-scene-haikei (4).svg") center/cover no-repeat, /* Top layer: shapes */
+    linear-gradient(to bottom, #111827, #1f2937); /* Bottom layer: dark gradient */
+}
+
+button {
+    outline: none; /* Removes the default outline */
+  }
+  
+  button:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Custom focus shadow */
+  }

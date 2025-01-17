@@ -1,0 +1,25 @@
+<div class="group">
+    <div class="relative overflow-hidden bg-white dark:bg-gray-800 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform group-hover:scale-105">
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-75 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></div>
+      <div class="relative p-6 flex items-center space-x-4">
+        <div class="flex-shrink-0">
+          <img
+            [src]="imageSrc || '/assets/placeholder.svg'"
+            [alt]="name + ' logo'"
+            width="64"
+            height="64"
+            class="rounded-full"
+          />
+        </div>
+        <div>
+          <p class="text-xl font-semibold text-gray-800 dark:text-gray-100 group-hover:text-white transition-colors duration-300 ease-in-out">
+            {{ name }}
+          </p>
+          <p class="text-sm text-gray-600 dark:text-gray-300 group-hover:text-gray-200 transition-colors duration-300 ease-in-out">
+            Proud Sponsor
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

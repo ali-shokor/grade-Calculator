@@ -1,0 +1,326 @@
+/* From Uiverse.io by Praashoo7 */ 
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card1 {
+  width: 72px;
+  height: 72px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.instagram {
+  margin-top: .6em;
+  margin-left: .8em;
+  fill: #cc39a4;
+}
+
+.card2 {
+  width: 72px;
+  height: 72px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+
+.card3 {
+  width: 72px;
+  height: 72px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.github {
+  margin-top: -.6em;
+  margin-left: .8em;
+}
+
+.card4 {
+  width: 72px;
+  height: 72px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.youtube {
+  margin-top: -1.3em;
+  margin-left: -1em;
+  
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: red;
+}
+
+.card4 .youtube_center_Icon {
+  fill: white;
+}
+
+.card4 .youtube_board {
+    fill: red;
+}
+
+.card4:hover .youtube_center_Icon {
+    fill: red;
+  }
+  
+.card4:hover .youtube_board {
+      fill: white;
+}
+
+.card2 {
+    width: 72px;
+    height: 72px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 90px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .linkedin {
+    margin-top: .7em;
+    margin-right: .3em;
+    fill: #0077b5;
+  }
+  
+  .card2:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #0077b5;
+  }
+  
+  .card2:hover .linkedin {
+    fill: white;
+  }
+
+  /* .card4:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background: rgb(161, 0, 0);
+  }
+  
+  .card4:hover .youtube {
+    fill: red;
+  }
+  
+  .card4:hover .youtube_center_Icon {
+    fill: rgb(255, 255, 255);
+  } */
+
+  /* From Uiverse.io by iconicchandu */ 
+.card {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(240, 15%, 9%);
+    --paragraph: hsl(0, 0%, 83%);
+    --line: hsl(240, 9%, 17%);
+    --primary: hsl(189, 92%, 58%);
+  
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  
+    padding: 1rem;
+    width: 19rem;
+    background-color: hsla(240, 15%, 9%, 1);
+    background-image: radial-gradient(
+        at 88% 40%,
+        hsla(240, 15%, 9%, 1) 0px,
+        transparent 85%
+      ),
+      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 0% 64%, hsl(189, 99%, 26%) 0px, transparent 85%),
+      radial-gradient(at 41% 94%, hsl(189, 97%, 36%) 0px, transparent 85%),
+      radial-gradient(at 100% 99%, hsl(188, 94%, 13%) 0px, transparent 85%);
+  
+    border-radius: 1rem;
+    box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+  }
+  
+ 
+/* .back {
+    background-image: url("./wave-haikei.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* Sponsored By Title Styling */
+.sponsored-by-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-right: 2rem;
+  position: relative;
+  animation: glowing 2s infinite alternate;
+  transition: color 0.3s ease;
+}
+
+/* Glowing effect for the title */
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12;
+    color: #333;
+  }
+  50% {
+    text-shadow: 0 0 20px #f39c12, 0 0 30px #f39c12, 0 0 40px #f39c12;
+    color: #f39c12;
+  }
+  100% {
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12;
+    color: #333;
+  }
+}
+
+/* Sponsor Logos Section */
+.sponsor-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Each Sponsor Item Styling */
+.sponsor-item {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  animation: glowing 2s infinite alternate;
+}
+
+/* Hover Effects for Sponsor Items */
+.sponsor-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background-color: #fffcf0;
+}
+
+/* Sponsor Text Styling */
+.sponsor-item .font-semibold {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Sponsor Image Styling */
+.sponsor-image {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Animation for Text and Image */
+.sponsor-item:hover .font-semibold {
+  color: #f39c12; /* Golden color on hover */
+}
+
+.sponsor-item:hover .sponsor-image {
+  transform: rotate(360deg);
+}
+
+/* Glowing Effect for Sponsor Items */
+@keyframes glowing {
+  0% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(255, 204, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5), 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.7), 0 0 30px rgba(59, 130, 246, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5), 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+}
+
+.footer-glow {
+  animation: glow 3s infinite;
+}
+
+.dark .footer-glow {
+  animation: glow 3s infinite;
+}
+
+/* Styles specific to Sponsored By section */

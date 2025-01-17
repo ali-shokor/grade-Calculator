@@ -1,0 +1,20 @@
+/* Styles specific to Sponsor Card */
+.group {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .group:hover {
+    transform: scale(1.05);
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .bg-gradient-to-r {
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  }
+  
+.group:hover {
+    cursor: pointer;
+}
