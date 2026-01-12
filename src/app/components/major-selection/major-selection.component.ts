@@ -13,10 +13,15 @@ export class MajorSelectionComponent {
 
   majors = [
     { id: 'mispe', name: 'MISPE' },
-    { id: 'bio-chem', name: 'Bio-Chem' },
+    { id: 'csvt', name: 'csvt' },
   ];
 
   onSelectMajor(majorId: string) {
+    const middlePosition = document.body.scrollHeight / 2;
+    window.scrollTo({
+      top: middlePosition,
+      behavior: 'smooth'
+    });
     this.majorSelected.major.set(true);
     this.selectMajor.emit(majorId);
   }

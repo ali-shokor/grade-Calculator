@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, inject, Input, Output, QueryList, ViewChildren } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -68,16 +68,15 @@ export class GradeCalculatorComponent {
           id: 'sem2-pe',
           name: 'Semester 2 (PE)',
           courses: [
-            { id: 'P1104', name: 'P1104', credits: 3 },
-            { id: 'P1105', name: 'P1105', credits: 3 },
-            { id: 'P1106', name: 'P1106', credits: 6 },
-            { id: 'P1107', name: 'P1107', credits: 6 },
-            { id: 'P1108', name: 'P1108', credits: 6 },
-            { id: 'P1109', name: 'P1109', credits: 6 },
+            { id: 'P1102', name: 'P1102', credits: 6 },
+            { id: 'P1103', name: 'P1103', credits: 6 },
+            { id: 'C1100', name: 'C1100', credits: 6 },
+            { id: 'M1107', name: 'M1107', credits: 6 },
+            { id: 'M1108', name: 'M1108', credits: 6 },
           ],
         },
       ],
-      'bio-chem': [
+      'csvt': [
         {
           id: 'sem1',
           name: 'Semester 1',
@@ -137,10 +136,10 @@ export class GradeCalculatorComponent {
       this.majors[this.major as keyof typeof this.majors].forEach((semester: Semester) => {
         // When Total is selected
         if (this.selectedSemester === 'total') {
-          // Include all semesters for bio-chem
+          // Include all semesters for csvt
           if (
-            (this.major === 'bio-chem') ||
-            (this.major !== 'bio-chem' &&
+            (this.major === 'csvt') ||
+            (this.major !== 'csvt' &&
               (semester.id === 'sem1' ||
                 (this.isMIS && semester.id === 'sem2-mis') ||
                 (!this.isMIS && semester.id === 'sem2-pe')))
@@ -161,10 +160,21 @@ export class GradeCalculatorComponent {
           });
         }
       });
-    
+      const currentScrollPosition = window.scrollY || document.documentElement.scrollTop;
+      const offset = 60; // Move down by 30px
+      const targetPosition = currentScrollPosition + offset;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+      
       const averageGrade = totalCredits > 0 ? totalWeightedGrade / totalCredits : 0;
       this.result = parseFloat(averageGrade.toFixed(2));
       this.userService.saveGrade(averageGrade, this.selectedSemester === 'total' ? averageGrade : null, this.major);
+      if (!this.isFormValid) {
+        alert("Incorrect Grade Input!")
+      }
     }
     
   
@@ -184,6 +194,10 @@ export class GradeCalculatorComponent {
       this.selectedSemester = 'sem1';
       this.majorSelected.major.set(false);
       this.result = null;
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
       this.reset.emit();
     }
 

@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Output, signal } from '@angular/core';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-hero',
@@ -7,9 +8,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
+  theme = inject(ThemeService)
+  isDark = signal(this.theme.isDarkMode);
   @Output() pressed = new EventEmitter();
 
-  togglePofile() {
+  toggleProfile() {
     this.pressed.emit();
   }
 }

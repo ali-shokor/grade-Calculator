@@ -3,7 +3,12 @@
       <header class="container mx-auto px-4 py-4 flex justify-between items-center">
         <h1 class="text-3xl flex justify-center text-center space-x-3 font-bold text-blue-800 dark:text-blue-200">
           <div class="felx pt-3 justify-center text-center">
-            You'r Welcome {{ user }}
+            @if (user === ''){
+              Hello There{{ user }}!
+            }
+            @else {
+              Hello {{ user }}!
+            }
           </div>
         </h1>
         <div class="flex items-center space-x-4">

@@ -27,6 +27,8 @@ export class HomeComponent {
   ) {}
 
   ngOnInit() {
+   
+    
     this.userService.user$.subscribe((user) => {
       this.user = user ? user.name : '';
       

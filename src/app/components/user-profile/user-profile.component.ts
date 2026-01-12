@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-user-profile',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })
@@ -38,6 +39,10 @@ export class UserProfileComponent {
   }
 
   toggleProfile() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
     this.pressed.emit()
   }
 }

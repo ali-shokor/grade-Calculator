@@ -61,7 +61,7 @@ export class UserService {
 
   saveGrade(semesterGrade: number, totalGrade: number | null, selectedMajor: string) {
     const newGrades = [...this.grades];
-    const semesterName = selectedMajor === 'mispe' ? 'MISP' : 'Bio-Chem';
+    const semesterName = selectedMajor === 'mispe' ? 'MISP' : 'csvt';
     const semester = totalGrade ? 'Total' : `Semester ${newGrades.length + 1}`;
     const gradeToSave = totalGrade || semesterGrade;
 

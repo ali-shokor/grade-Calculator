@@ -5,7 +5,7 @@
           Welcome to Grade Calculator
         </h1>
         <p class="text-left text-xl text-gray-700 dark:text-gray-300 mb-8">
-          Easily calculate your grades for MISPE and Bio-Chem majors. Track your academic progress and stay on top of your studies with our user-friendly grade calculator.
+          Easily calculate your grades for MISPE and csvt majors. Track your academic progress and stay on top of your studies with our user-friendly grade calculator.
         </p>
       </div>
       <div>
